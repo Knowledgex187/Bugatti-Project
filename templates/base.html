@@ -3,14 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>{% block title %}Home{% endblock %}</title>
   </head>
   <body>
     <section id="home">
       <header>
         <h1>Bugatti</h1>
       </header>
-      <nav>
+      <!--defining nav class & button collapse and format-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div>
           <!-- Adding the Hash connects the pages or sections once the button is pressed-->
           <a href="about.html"><button type="button">About</button></a>
