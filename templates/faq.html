@@ -1,77 +1,81 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {%block content %}
 
 <h1 align="center">FAQ's</h1>
-<hr>
-<div>
-  <ol>
-    <li>
-      <p><h2><a href="#Q1">What is the top speed of the Chiron?</a></h2></p>
-    </li>
-    <li>
-      <p><h2><a href="#Q2">What's the 0-60mph capability of the Chiron?</a></h2></p>
-    </li>
-    <li>
-      <p><h2><a href="#Q3">What is the 0-60mph capability of the Veyron?</a></h2></p>
-    </li>
-    <li>
-      <p><h2>
-        <a href="#Q4">Is the Chiron a production car or a concept?</a>
-      </h2></p>
-    </li>
-    <li>
-      <p><h2><a href="#Q5">Is the Veyron a production car or a concept?</a></h2></p>
-    </li>
-    <li>
-      <p><h2><a href="#Q6">Why was the Veyron created?</a></h2></p>
-    </li>
-    <li>
-      <p><h2><a href="#Q7">Is the customer service line 24 hours?</a></h2></p>
-    </li>
-    <li>
-      <p><h2><a href="#Q8">What's the refund policy?</a></h2></p>
-    </li>
-    <li>
-      <p><h2><a href="#Q9">How long will my car take to build?</a></h2></p>
-    </li>
-    <li>
-      <p><h2><a href="#Q10">Where's my nearest Bugatti garage?</a></h2></p>
-    </li>
-  </ol>
-</div>
-<hr>
-<div>
-    <ol>
-        <li>
-            <p><h3 id="Q1">The top speed of the Chiron is 276mph.</h3></p>
-        </li>
-        <li>
-            <p><h3 id="Q2">0-60 mph in 2.6 seconds.</h3></p>
-        </li>
-        <li>
-            <p><h3 id="Q3">0-60mph in 3.2 seconds.</h3></p>
-        </li>
-        <li>
-            <p><h3 id="Q4">The Chiron is a production vehicle, and not a concept car.</h3></p>
-        </li>
-        <li>
-            <p><h3 id="Q5">The Veyron is a production vehicle, and not a concept car.</h3></p>
-        </li>
-        <li>
-            <p><h3 id="Q6">To beat the land speed record of the McClaren F1.</h3></p>
-        </li>
-        <li>
-            <p><h3 id="Q7">We run a 24 hour customer service, and our operatives are highly trained and are willing to deal with enquiries not matter the time of day. </h3></p>
-        </li>
-        <li>
-            <p><h3 id="Q8">Full monies will be refunded within 90 days, as long as the refund is in-line with our refund policy.</h3></p>
-        </li>
-        <li>
-            <p><h3 id="Q9">Customers should have their chosen build completed within 90 days upon receipt of invoice.</h3></p>
-        </li>
-        <li>
-            <p><h3 id="Q10">We do not have garages per se, but a valet service. Once booked we will fly our operatives out to you and we'll arrange for your car to be picked up and taken to the nearest centre. Even if this requires your car to be picked by and dropped to us via air. All costs are fully inclusive of repair and transportation, along with operative food, travel and accommodation costs included. </h3></p>
-        </li>
-    </ol>
-</div>
-<hr>
-{% endblock %}
+<hr />
+<article>
+  <button class="accordian">What is the top speed of the Chiron?</button>
+  <div class="panel">
+    <p>The top speed of the Chiron is 276mph.</p>
+  </div>
+
+  <button class="accordian">
+    What's the 0-60mph capability of the Chiron?
+  </button>
+  <div class="panel">
+    <p>0-60 mph in 2.6 seconds.</p>
+  </div>
+
+  <button class="accordian">
+    What is the 0-60mph capability of the Veyron?
+  </button>
+  <div class="panel">
+    <p>0-60mph in 3.2 seconds.</p>
+  </div>
+
+  <button class="accordian">
+    Is the Chiron a production car or a concept?
+  </button>
+  <div class="panel">
+    <p>The Chiron is a production vehicle, and not a concept car.</p>
+  </div>
+
+  <button class="accordian">
+    Is the Veyron a production car or a concept?
+  </button>
+  <div class="panel">
+    <p>The Veyron is a production vehicle, and not a concept car.</p>
+  </div>
+
+  <button class="accordian">Why was the Veyron created?</button>
+  <div class="panel">
+    <p>To beat the land speed record of the McClaren F1.</p>
+  </div>
+
+  <button class="accordian">Is the customer service line 24 hours?</button>
+  <div class="panel">
+    <p>
+      We run a 24 hour customer service, and our operatives are highly trained
+      and are willing to deal with enquiries not matter the time of day.
+    </p>
+  </div>
+
+  <button class="accordian">What's the refund policy?</button>
+  <div class="panel">
+    <p>
+      Full monies will be refunded within 90 days, as long as the refund is
+      in-line with our refund policy.
+    </p>
+  </div>
+
+  <button class="accordian">How long will my car take to build?</button>
+  <div class="panel">
+    <p>
+      Customers should have their chosen build completed within 90 days upon
+      receipt of invoice.
+    </p>
+  </div>
+
+  <button class="accordian">Where's my nearest Bugatti garage?</button>
+  <div class="panel">
+    <p>
+      We do not have garages per se, but a valet service. Once booked we will
+      fly our operatives out to you and we'll arrange for your car to be picked
+      up and taken to the nearest centre. Even if this requires your car to be
+      picked by and dropped to us via air. All costs are fully inclusive of
+      repair and transportation, along with operative food, travel and
+      accommodation costs included.
+    </p>
+  </div>
+  <hr />
+  {% endblock %}
+</article>
