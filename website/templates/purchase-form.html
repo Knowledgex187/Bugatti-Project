@@ -12,56 +12,23 @@ content%}
     </select>
   </div>
  
-  <div data-mdb-input-init class="form-outline mb-4">
-    <label for="ccn">Card Details:</label>
-    <input
-      type="tel"
-      inputmode="numeric"
-      pattern="[0-9\s]{16}"
-      autocomplete="cc-number"
-      maxlength="16"
-      class="form-control"
-      id="ccn"
-      name="ccn"
-      placeholder="**** **** **** ****"
-      required />
-    <label for="exccn">Expiry Date:</label>
-    <input
-      type="tel"
-      inputmode="numeric"
-      pattern="[0-9\s]{2}"
-      autocomplete="on"
-      maxlength="2"
-      class="form-control"
-      id="exccn"
-      name="exccn"
-      placeholder="**"
-      required />
-    /
-    <input
-      type="tel"
-      inputmode="numeric"
-      pattern="[0-9\s]{2}"
-      autocomplete="on"
-      maxlength="2"
-      class="form-control"
-      id="exccn"
-      name="exccn"
-      placeholder="**"
-      required />
-    <label for="exccn">Security Code:</label>
-    <input
-      type="tel"
-      inputmode="numeric"
-      pattern="[0-9\s]{3}"
-      autocomplete="on"
-      maxlength="3"
-      class="form-control"
-      id="exccn"
-      name="exccn"
-      placeholder="***"
-      required />
+  <div class="container my-5 py-5">
+
+  <div class="col-md-8">
+    <div class="card mb-4">
+      <div class="card-body">
+        <p class="text-uppercase h4 text-font">Delivery Country:</p>
+        <div class="row">
+          <div class="col-md-8">
+              <input type="text" class="form-control" id="form11Example1" placeholder="Enter Country">
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+
   <div class="row">
     <div class="col-md-8 mb-4">
       <div class="card mb-4">
@@ -90,13 +57,13 @@ content%}
               </div>
             </div>
 
-            <!-- Text input -->
+            <!-- Company Name Text input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="text" id="form7Example3" class="form-control" placeholder="Company Name" />
               <label class="form-label" for="form7Example3">Company name</label>
             </div>
 
-            <!-- Text input -->
+            <!-- Address text input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="text" id="form7Example4" class="form-control" placeholder="Line 1" />
               <label class="form-label" for="form7Example4">Address</label>
@@ -120,36 +87,73 @@ content%}
               <label class="form-label" for="form7Example5">Email</label>
             </div>
 
-            <!-- Number input -->
+            <!-- Phone number input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="tel" id="form7Example6" class="form-control" placeholder="**** **** ****" required/>
               <label class="form-label" for="form7Example6">Phone</label>
             </div>
 
+            <!--Card Details Input-->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <label for="ccn">Card Details:</label>
+                <input
+                  type="tel"
+                  inputmode="numeric"
+                  pattern="[0-9\s]{16}"
+                  autocomplete="cc-number"
+                  maxlength="16"
+                  class="form-control"
+                  id="ccn"
+                  name="ccn"
+                  placeholder="**** **** **** ****"
+                  required />
+                <label for="exccn">Expiry Date:</label>
+                <input
+                  type="tel"
+                  inputmode="numeric"
+                  pattern="[0-9\s]{2}"
+                  autocomplete="on"
+                  maxlength="2"
+                  class="form-control"
+                  id="exccn"
+                  name="exccn"
+                  placeholder="**"
+                  required />
+                /
+                <input
+                  type="tel"
+                  inputmode="numeric"
+                  pattern="[0-9\s]{2}"
+                  autocomplete="on"
+                  maxlength="2"
+                  class="form-control"
+                  id="exccn"
+                  name="exccn"
+                  placeholder="**"
+                  required />
+                <label for="exccn">Security Code:</label>
+                <input
+                  type="tel"
+                  inputmode="numeric"
+                  pattern="[0-9\s]{3}"
+                  autocomplete="on"
+                  maxlength="3"
+                  class="form-control"
+                  id="exccn"
+                  name="exccn"
+                  placeholder="***"
+                  required />
+              </div>
           </form>
         </div>
       </div>
     </div>
   </div>
-  <div class="container my-5 py-5">
+
+
     <!--Section: Design Block-->
     <section>
       <div class="row">
-        <div class="col-md-8">
-          <div class="card mb-4">
-            <div class="card-body">
-              <p class="text-uppercase h4 text-font">Delivery Country:</p>
-              <div class="row">
-                <div class="col-md-8">
-                    <input type="text" class="form-control" id="form11Example1" placeholder="Enter Country">
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
         <div class="col-md-8 mb-4">
           <div class="card mb-4">
             <div class="card-header py-3">
@@ -186,7 +190,7 @@ content%}
                   </div>
                 </div>
 
-                <!-- Text input -->
+                <!-- Company Name Text input -->
                 <div data-mdb-input-init class="form-outline mb-4">
                   <input type="text" id="form11Example3" class="form-control" placeholder="Enter Company Name" />
                   <label class="form-label" for="form11Example3"
@@ -194,7 +198,7 @@ content%}
                   >
                 </div>
 
-                <!-- Text input -->
+                <!-- Address Text input -->
                 <div data-mdb-input-init class="form-outline mb-4">
                     <input type="text" id="form7Example4" class="form-control" placeholder="Line 1" />
                     <label class="form-label" for="form7Example4">Address</label>
@@ -223,7 +227,7 @@ content%}
                   <label class="form-label" for="form11Example5">Email</label>
                 </div>
 
-                <!-- Number input -->
+                <!-- Phone Number input -->
                 <div data-mdb-input-init class="form-outline mb-4">
                   <input
                     type="tel"
