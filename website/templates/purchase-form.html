@@ -4,39 +4,262 @@ content%}
 <h1 align="center">Purchase Form</h1>
 
 <form method="POST">
-  <div class="form-group">
+  <div for="cars" class="col-md-8">
     <label for="cars">Choose Car to Purchase:</label>
-    <select id="cars">
+    <select data-mdb-select-init>
       <option value="Veyron">Veyron</option>
       <option value="Chiron">Chiron</option>
     </select>
   </div>
-  <div class="form-group">
-    <label for="email">Email Address:</label>
+ 
+  <div data-mdb-input-init class="form-outline mb-4">
+    <label for="ccn">Card Details:</label>
     <input
-      type="email"
+      type="tel"
+      inputmode="numeric"
+      pattern="[0-9\s]{16}"
+      autocomplete="cc-number"
+      maxlength="16"
       class="form-control"
-      id="email"
-      name="email"
-      placeholder="Enter email" />
+      id="ccn"
+      name="ccn"
+      placeholder="**** **** **** ****"
+      required />
+    <label for="exccn">Expiry Date:</label>
+    <input
+      type="tel"
+      inputmode="numeric"
+      pattern="[0-9\s]{2}"
+      autocomplete="on"
+      maxlength="2"
+      class="form-control"
+      id="exccn"
+      name="exccn"
+      placeholder="**"
+      required />
+    /
+    <input
+      type="tel"
+      inputmode="numeric"
+      pattern="[0-9\s]{2}"
+      autocomplete="on"
+      maxlength="2"
+      class="form-control"
+      id="exccn"
+      name="exccn"
+      placeholder="**"
+      required />
+    <label for="exccn">Security Code:</label>
+    <input
+      type="tel"
+      inputmode="numeric"
+      pattern="[0-9\s]{3}"
+      autocomplete="on"
+      maxlength="3"
+      class="form-control"
+      id="exccn"
+      name="exccn"
+      placeholder="***"
+      required />
   </div>
-  <div class="form-group">
-    <label for="firstName"> First Name:</label>
-    <input
-      type="text"
-      class="form-control"
-      id="firstName"
-      name="firstName"
-      placeholder="Enter First Name" />
+  <div class="row">
+    <div class="col-md-8 mb-4">
+      <div class="card mb-4">
+        <div class="card-header py-3">
+          <h5 class="mb-0">Billing details</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form7Example1" class="form-control" placeholder="First Name" required/>
+                  <label class="form-label" for="form7Example1"
+                    >First name</label
+                  >
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form7Example2" class="form-control" placeholder="Last Name" required />
+                  <label class="form-label" for="form7Example2"
+                    >Last name</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Text input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="text" id="form7Example3" class="form-control" placeholder="Company Name" />
+              <label class="form-label" for="form7Example3">Company name</label>
+            </div>
+
+            <!-- Text input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="text" id="form7Example4" class="form-control" placeholder="Line 1" />
+              <label class="form-label" for="form7Example4">Address</label>
+            </div>
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="text" id="form7Example4" class="form-control" placeholder="Line 2" />
+              <label class="form-label" for="form7Example4">Address</label>
+            </div>
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="text" id="form7Example4" class="form-control" placeholder="Line 3" />
+              <label class="form-label" for="form7Example4">Address</label>
+            </div>
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="text" id="form7Example4" class="form-control" placeholder="Line 4" />
+              <label class="form-label" for="form7Example4">Address</label>
+            </div>
+
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form7Example5" class="form-control" placeholder="Enter Email" required />
+              <label class="form-label" for="form7Example5">Email</label>
+            </div>
+
+            <!-- Number input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="tel" id="form7Example6" class="form-control" placeholder="**** **** ****" required/>
+              <label class="form-label" for="form7Example6">Phone</label>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="lastName"> Last Name:</label>
-    <input
-      type="text"
-      class="form-control"
-      id="lastName"
-      name="lastName"
-      placeholder="Enter Last Name" />
+  <div class="container my-5 py-5">
+    <!--Section: Design Block-->
+    <section>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card mb-4">
+            <div class="card-body">
+              <p class="text-uppercase h4 text-font">Delivery Country:</p>
+              <div class="row">
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="form11Example1" placeholder="Enter Country">
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-8 mb-4">
+          <div class="card mb-4">
+            <div class="card-header py-3">
+              <h5 class="mb-0 text-font text-uppercase">Delivery address:</h5>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="row mb-4">
+                  <div class="col">
+                    <div data-mdb-input-init class="form-outline">
+                      <input
+                        type="text"
+                        id="form11Example1"
+                        class="form-control"
+                        placeholder="First Name"
+                        required />
+                      <label class="form-label" for="form11Example1"
+                        >First name</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div data-mdb-input-init class="form-outline">
+                      <input
+                        type="text"
+                        id="form11Example2"
+                        class="form-control"
+                        placeholder="Last Name"
+                        required />
+                      <label class="form-label" for="form11Example2"
+                        >Last name</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Text input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form11Example3" class="form-control" placeholder="Enter Company Name" />
+                  <label class="form-label" for="form11Example3"
+                    >Company name</label
+                  >
+                </div>
+
+                <!-- Text input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form7Example4" class="form-control" placeholder="Line 1" />
+                    <label class="form-label" for="form7Example4">Address</label>
+                  </div>
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form7Example4" class="form-control" placeholder="Line 2" />
+                    <label class="form-label" for="form7Example4">Address</label>
+                  </div>
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form7Example4" class="form-control" placeholder="Line 3" />
+                    <label class="form-label" for="form7Example4">Address</label>
+                  </div>
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form7Example4" class="form-control" placeholder="Line 4" />
+                    <label class="form-label" for="form7Example4">Address</label>
+                  </div>
+
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input
+                    type="email"
+                    id="form11Example5"
+                    class="form-control"
+                    placeholder="Enter Email"
+                    required />
+                  <label class="form-label" for="form11Example5">Email</label>
+                </div>
+
+                <!-- Number input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input
+                    type="tel"
+                    id="form11Example6"
+                    class="form-control"
+                    placeholder="**** **** ****"
+                    required />
+                  <label class="form-label" for="form11Example6">Phone</label>
+                </div>
+
+                <!-- Message input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <textarea
+                    class="form-control"
+                    id="form11Example7"
+                    rows="4"></textarea>
+                  <label class="form-label" for="form11Example7"
+                    >Additional information</label
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="text-center">
+            <button
+              type="button"
+              data-mdb-button-init
+              data-mdb-ripple-init
+              class="btn button-order col-md-10">
+              Place order
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Section: Design Block-->
   </div>
 </form>
 
