@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {%block content %}
 
-<div>
+<div class="container col-md-6 offsett-md-2">
   <section id="mph to ms">
     <!--Image syntax-->
     <figure>
@@ -17,7 +17,7 @@
         <legend>MPH to M/S</legend>
         <label for="mph">MPH</label><br />
         <input type="number" id="mph" name="speed" /><br />
-        <button id="Miles">Convert</button><br />
+        <button id="miles" class="btn btn-primary">Convert</button><br />
         <input type="number" id="ms" name="speed" /><br />
         <label for="ms"> Meters Per Second</label><br />
       </fieldset>
@@ -25,7 +25,7 @@
   </section>
 </div>
 
-<div>
+<div class="container col-md-6 offsett-md-2">
   <section id="kmh to ms">
     <!--Image syntax-->
     <figure>
@@ -43,7 +43,7 @@
         <legend>KM/h to M/S</legend>
         <label for="kmh">KM/h</label><br />
         <input type="number" id="kmh" name="speed" /><br />
-        <button id="Kilometers">Convert</button><br />
+        <button id="kilometers" class="btn btn-primary">Convert</button><br />
         <input type="number" id="ms" name="speed" /><br />
         <label for="ms"> Meters Per Second</label><br />
       </fieldset>
