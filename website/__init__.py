@@ -12,6 +12,7 @@ def create_app():
     from .views import views
     from .auth import auth
 
+    # Register the base prefix to access auth and views routes
     app.register_blueprint(views, url_prefix="/")
     app.register_blueprint(auth, url_prefix="/")
 

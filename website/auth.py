@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, request, flash
-from flask_login import current_user
 
 auth = Blueprint("auth", __name__)
 
@@ -50,4 +49,19 @@ def sign_up():
         else:
             flash("Account created successfully!", category="success")
 
-    return render_template("sign-up.html", user=current_user)
+    return render_template("sign-up.html")
+
+
+@auth.route("/logout")
+def logout():
+    pass
+
+
+@auth.route("/login")
+def login():
+    return render_template("login.html")
+
+
+@auth.route("/submit-purchase-form")
+def purchase_form():
+    return render_template("purchase-form.html")

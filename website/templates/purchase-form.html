@@ -1,277 +1,187 @@
-{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {%block
-content%}
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+content %}
 
-<h1 align="center">Purchase Form</h1>
+<h1 class="text-center">Purchase Form</h1>
 
 <div class="container my-5 py-5">
+  <form id="purchase" method="POST">
+    <div class="mb-3">
+      <label for="cars" class="form-label">Choose Car to Purchase:</label>
+      <select name="cars" id="cars" class="form-select" required>
+        <optgroup label="Model">
+          <option value="Veyron">Veyron</option>
+          <option value="Chiron" selected>Chiron</option>
+        </optgroup>
+      </select>
+    </div>
 
-<form id="purchase" method="POST">
-  <div for="cars" class="col-md-8">
-    <label for="cars">Choose Car to Purchase:</label>
-    <select name="cars" id="cars" data-mdb-select-init form="purchase" required>
-      <optgroup label="Model">
-      <option value="Veyron">Veyron</option>
-      <option value="Chiron" selected>Chiron</option>
-    </optgroup>
-    </select>
-  </div>
- 
+    <div class="mb-3">
+      <label for="country" class="form-label">Delivery Country:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="country"
+        placeholder="Enter Country"
+        required />
+    </div>
 
-  <div class="col-md-8">
     <div class="card mb-4">
+      <div class="card-header">Billing details:</div>
       <div class="card-body">
-        <p class="text-uppercase h4 text-font">Delivery Country:</p>
-        <div class="row">
-          <div class="col-md-8">
-              <input type="text" class="form-control" id="form11Example1" placeholder="Enter Country" required>
-            </select>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              class="form-control"
+              placeholder="First Name"
+              required />
           </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              class="form-control"
+              placeholder="Last Name"
+              required />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="companyName" class="form-label">Company Name</label>
+          <input
+            type="text"
+            id="companyName"
+            class="form-control"
+            placeholder="Company Name" />
+        </div>
+
+        <div class="mb-3">
+          <label for="addressLine1" class="form-label">Address Line 1</label>
+          <input
+            type="text"
+            id="addressLine1"
+            class="form-control"
+            placeholder="Line 1"
+            required />
+        </div>
+
+        <div class="mb-3">
+          <label for="addressLine2" class="form-label">Address Line 2</label>
+          <input
+            type="text"
+            id="addressLine2"
+            class="form-control"
+            placeholder="Line 2"
+            required />
+        </div>
+
+        <div class="mb-3">
+          <label for="city" class="form-label">City</label>
+          <input
+            type="text"
+            id="city"
+            class="form-control"
+            placeholder="City"
+            required />
+        </div>
+
+        <div class="mb-3">
+          <label for="zipCode" class="form-label">Zip Code</label>
+          <input
+            type="text"
+            id="zipCode"
+            class="form-control"
+            placeholder="Zip Code"
+            required />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter Email"
+            required />
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            class="form-control"
+            placeholder="**** **** ****"
+            required />
+        </div>
+
+        <div class="mb-3">
+          <label for="ccn" class="form-label">Card Details</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="ccn"
+            name="ccn"
+            placeholder="**** **** **** ****"
+            pattern="[0-9\s]{16}"
+            inputmode="numeric"
+            autocomplete="cc-number"
+            maxlength="16"
+            required />
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="expMonth" class="form-label">Expiry Month</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="expMonth"
+              name="expMonth"
+              placeholder="MM"
+              pattern="[0-9\s]{2}"
+              inputmode="numeric"
+              maxlength="2"
+              required />
+          </div>
+          <div class="col-md-6">
+            <label for="expYear" class="form-label">Expiry Year</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="expYear"
+              name="expYear"
+              placeholder="YY"
+              pattern="[0-9\s]{2}"
+              inputmode="numeric"
+              maxlength="2"
+              required />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="securityCode" class="form-label">Security Code</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="securityCode"
+            name="securityCode"
+            placeholder="***"
+            pattern="[0-9\s]{3}"
+            inputmode="numeric"
+            maxlength="3"
+            required />
         </div>
       </div>
     </div>
 
-  </div>
-
-  <div class="row">
-    <div class="col-md-8 mb-4">
-      <div class="card mb-4">
-        <div class="card-header py-3">
-          <h5 class="mb-0">Billing details:</h5>
-        </div>
-        <div class="card-body">
-          <form>
-            <!-- 2 column grid layout with text inputs for the first and last names -->
-            <div class="row mb-4">
-              <div class="col">
-                <div data-mdb-input-init class="form-outline">
-                  <input type="text" id="form7Example1" class="form-control" placeholder="First Name" required/>
-                  <label class="form-label" for="form7Example1"
-                    >First name</label
-                  >
-                </div>
-              </div>
-              <div class="col">
-                <div data-mdb-input-init class="form-outline">
-                  <input type="text" id="form7Example2" class="form-control" placeholder="Last Name" required />
-                  <label class="form-label" for="form7Example2"
-                    >Last name</label
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Company Name Text input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-              <input type="text" id="form7Example3" class="form-control" placeholder="Company Name" />
-              <label class="form-label" for="form7Example3">Company name</label>
-            </div>
-
-            <!-- Address text input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-              <input type="text" id="form7Example4" class="form-control" placeholder="Line 1" required/>
-              <label class="form-label" for="form7Example4">Address</label>
-            </div>
-            <div data-mdb-input-init class="form-outline mb-4">
-              <input type="text" id="form7Example4" class="form-control" placeholder="Line 2" required/>
-              <label class="form-label" for="form7Example4">Address</label>
-            </div>
-            <div data-mdb-input-init class="form-outline mb-4">
-              <input type="text" id="form7Example4" class="form-control" placeholder="City" required/>
-              <label class="form-label" for="form7Example4">Address</label>
-            </div>
-            <div data-mdb-input-init class="form-outline mb-4">
-              <input type="text" id="form7Example4" class="form-control" placeholder="Zip Code" required />
-              <label class="form-label" for="form7Example4">Address</label>
-            </div>
-
-            <!-- Email input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-              <input type="email" id="form7Example5" class="form-control" placeholder="Enter Email" required />
-              <label class="form-label" for="form7Example5">Email</label>
-            </div>
-
-            <!-- Phone number input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-              <input type="tel" id="form7Example6" class="form-control" placeholder="**** **** ****" required/>
-              <label class="form-label" for="form7Example6">Phone</label>
-            </div>
-
-            <!--Card Details Input-->
-            <div data-mdb-input-init class="form-outline mb-4">
-                <label for="ccn">Card Details:</label>
-                <input
-                  type="tel"
-                  inputmode="numeric"
-                  pattern="[0-9\s]{16}"
-                  autocomplete="cc-number"
-                  maxlength="16"
-                  class="form-control"
-                  id="ccn"
-                  name="ccn"
-                  placeholder="**** **** **** ****"
-                  required />
-                <label for="exccn">Expiry Date:</label>
-                <input
-                  type="tel"
-                  inputmode="numeric"
-                  pattern="[0-9\s]{2}"
-                  autocomplete="on"
-                  maxlength="2"
-                  class="form-control"
-                  id="exccn"
-                  name="exccn"
-                  placeholder="**"
-                  required />
-                /
-                <input
-                  type="tel"
-                  inputmode="numeric"
-                  pattern="[0-9\s]{2}"
-                  autocomplete="on"
-                  maxlength="2"
-                  class="form-control"
-                  id="exccn"
-                  name="exccn"
-                  placeholder="**"
-                  required />
-                <label for="exccn">Security Code:</label>
-                <input
-                  type="tel"
-                  inputmode="numeric"
-                  pattern="[0-9\s]{3}"
-                  autocomplete="on"
-                  maxlength="3"
-                  class="form-control"
-                  id="exccn"
-                  name="exccn"
-                  placeholder="***"
-                  required />
-              </div>
-          </form>
-        </div>
-      </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Place Order</button>
+      <button type="reset" class="btn btn-secondary">Reset</button>
     </div>
-  </div>
-
-
-    <!--Section: Design Block-->
-    <section>
-      <div class="row">
-        <div class="col-md-8 mb-4">
-          <div class="card mb-4">
-            <div class="card-header py-3">
-              <h5 class="mb-0 text-font text-uppercase">Delivery address:</h5>
-            </div>
-            <div class="card-body">
-              <form>
-                <div class="row mb-4">
-                  <div class="col">
-                    <div data-mdb-input-init class="form-outline">
-                      <input
-                        type="text"
-                        id="form11Example1"
-                        class="form-control"
-                        placeholder="First Name"
-                        required />
-                      <label class="form-label" for="form11Example1"
-                        >First name</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div data-mdb-input-init class="form-outline">
-                      <input
-                        type="text"
-                        id="form11Example2"
-                        class="form-control"
-                        placeholder="Last Name"
-                        required />
-                      <label class="form-label" for="form11Example2"
-                        >Last name</label
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Company Name Text input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="text" id="form11Example3" class="form-control" placeholder="Enter Company Name" />
-                  <label class="form-label" for="form11Example3"
-                    >Company name</label
-                  >
-                </div>
-
-                <!-- Address Text input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="text" id="form7Example4" class="form-control" placeholder="Line 1" required/>
-                    <label class="form-label" for="form7Example4">Address</label>
-                  </div>
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="text" id="form7Example4" class="form-control" placeholder="Line 2" required />
-                    <label class="form-label" for="form7Example4">Address</label>
-                  </div>
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="text" id="form7Example4" class="form-control" placeholder="City" required/>
-                    <label class="form-label" for="form7Example4">Address</label>
-                  </div>
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="text" id="form7Example4" class="form-control" placeholder="Zip Code" required />
-                    <label class="form-label" for="form7Example4">Address</label>
-                  </div>
-
-                <!-- Email input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input
-                    type="email"
-                    id="form11Example5"
-                    class="form-control"
-                    placeholder="Enter Email"
-                    required />
-                  <label class="form-label" for="form11Example5">Email</label>
-                </div>
-
-                <!-- Phone Number input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input
-                    type="tel"
-                    id="form11Example6"
-                    class="form-control"
-                    placeholder="**** **** ****"
-                    required />
-                  <label class="form-label" for="form11Example6">Phone</label>
-                </div>
-
-                <!-- Message input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <textarea
-                    class="form-control"
-                    id="form11Example7"
-                    rows="4"
-                    placeholder="Additional Information...."
-                    wrap="hard"></textarea>
-                  <label class="form-label" for="form11Example7"
-                    >Additional information</label
-                  >
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="text-center">
-            <button
-              type="button"
-              data-mdb-button-init
-              data-mdb-ripple-init
-              class="btn button-order col-md-10">
-              Place order
-            </button>
-            <button type="reset" data-mdb-button-init
-            data-mdb-ripple-init
-            class="btn button-order col-md-10"></button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--Section: Design Block-->
   </form>
 </div>
 

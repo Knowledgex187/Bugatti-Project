@@ -3,66 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Additional meta data author and description-->
+    <!-- Additional meta data author and description -->
     <meta name="author" content="Knowledge" />
     <meta name="description" content="Bugatti Web Application" />
-    <!--Static image code to be placed within tab icon-->
+    <!-- Static image code to be placed within tab icon -->
     <link rel="icon" href="/static/Bugatti.jpg" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7MR5X4b7CLZ7/zR7/z6u1lV+nu+H1mv0H2k"
+      crossorigin="anonymous" />
+
     <title>{% block title %}Home{% endblock %}</title>
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!--Nav bar that collapses and alters depending on screen width or resolution-->
+    <!-- Nav bar that collapses and alters depending on screen width or resolution -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar">
-        <div class="navbar-nav">
-          <!--Code to display only nav headers once a user is authenticated via Jinja template string-->
-          {% if user.is_authenticated %}
-          <!--Logout Nav link, only displayed once authenticated-->
-          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
-          <!--Purchase form Nav link, again only displayed once logged in-->
-          <a
-            class="nav-item nav-link"
-            id="submit-purchase-form"
-            href="/submit-purchase-form"
-            >Submit Purchase Form</a
-          >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            <!-- Code to display only nav headers once a user is authenticated via Jinja template string -->
+            <!-- Logout Nav link, only displayed once authenticated -->
+            <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+            <!-- Purchase form Nav link, again only displayed once logged in -->
+            <a
+              class="nav-item nav-link"
+              id="submit-purchase-form"
+              href="/submit-purchase-form"
+              >Submit Purchase Form</a
+            >
+            <!-- Nav link for about -->
+            <a class="nav-item nav-link" id="about" href="/">About</a>
+            <!-- Nav link for History -->
+            <a class="nav-item nav-link" id="history" href="/history"
+              >History</a
+            >
+            <!-- Nav link for Bugatti Chiron -->
+            <a
+              class="nav-item nav-link"
+              id="bugatti-chiron"
+              href="/bugatti-chiron"
+              >Bugatti Chiron</a
+            >
+            <a
+              class="nav-item nav-link"
+              id="bugatti-veyron"
+              href="/bugatti-veyron"
+              >Bugatti Veyron</a
+            >
+            <!-- Nav link for speed conversion page -->
+            <a class="nav-item nav-link" id="conversion" href="/conversion"
+              >Speed Conversions</a
+            >
+            <!-- Nav link for login, notice it's included within the else statement -->
+            <a class="nav-item nav-link" id="login" href="/login">Login</a>
+            <!-- Nav link for Sign Up -->
+            <a class="nav-item nav-link" id="sign-up" href="/sign-up"
+              >Sign Up</a
+            >
 
-          {% else %}
-          <!--Nav link for about-->
-          <a class="nav-item nav-link" id="about" href="/">About</a>
-          <!--Nav link for History-->
-          <a class="nav-item nav-link" id="history" href="/history">History</a>
-          <!--Nav link for Bugatti Chiron-->
-          <a
-            class="nav-item nav-link"
-            id="bugatti-chiron"
-            href="/bugatti-chiron"
-            >Bugatti Chiron</a
-          >
-          <!--Nav link for speed conversion page-->
-          <a class="nav-item nav-link" id="conversion" href="/conversion"
-            >Speed Conversions</a
-          >
-          <!--Nav link for login, notice it's included within the else statement-->
-          <a class="nav-item nav-link" id="login" href="/login">Login</a>
-          <!--Nav link for Sign Up-->
-          <a class="nav-item nav-link" id="sign-up" href="/sign-up">Sign Up</a>
-          <button class="btn"><i class="fa fa-home"></i>Top</button>
+            <!-- Button with icon (example usage, not typically found in a navbar) -->
+            <button class="btn btn-light">
+              <i class="fa fa-home"></i> Top
+            </button>
+          </div>
         </div>
       </div>
     </nav>
+    <!--Must input this syntax for the script to display templates rendered-->
+    <div class="class container">{% block content %}{% endblock %}</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
-{% endif %}

@@ -1,34 +1,37 @@
-{% extends "base.html" %} {% block title %}Login{% endblock %} {%block content
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
 %}
 <form method="POST">
-  <h3 align="center">Login</h3>
-  <div class="form-group input-group">
-    <label for="email"> Email Address</label>
-    <input
-      type="email"
-      class="form-control"
-      id="email"
-      name="email"
-      placeholder="Enter email"
-      required />
-    <span class="input-group-addon"
-      ><i class="glyphicon glyphicon-user"></i
-    ></span>
+  <h3 class="text-center">Login</h3>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <div class="input-group mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+        required />
+      <span class="input-group-text">
+        <i class="bi bi-envelope"></i>
+      </span>
+    </div>
   </div>
-  <div class="form-group input-group">
+  <div class="form-group">
     <label for="password">Password</label>
-    <input
-      type="password"
-      class="form-control"
-      id="password"
-      name="password"
-      placeholder="Enter Password"
-      required />
-    <span class="input-group-addon"
-      ><i class="glyphicon glyphicon-lock"></i
-    ></span>
+    <div class="input-group mb-3">
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter Password"
+        required />
+      <span class="input-group-text">
+        <i class="bi bi-lock"></i>
+      </span>
+    </div>
   </div>
-  <br />
-  <button type="submit" class="btn btn-primary">Login</button>
+  <button type="submit" class="btn btn-primary btn-block">Login</button>
 </form>
 {% endblock %}
