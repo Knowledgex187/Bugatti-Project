@@ -23,7 +23,7 @@ def bugatti_veyron():
 
 
 # Conversions Page
-@views.route("/conversions")
+@views.route("/conversion")
 def conversions():
     return render_template("conversions.html", user=current_user)
 
