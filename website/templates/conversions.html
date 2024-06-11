@@ -1,54 +1,67 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {%block content %}
 
-<div class="container my-5 col-md-6 offsett-md-2">
-  <section id="mph to ms">
-    <!--Image syntax-->
-    <figure>
-      <img
-        src="/static/speed-img.jpg"
-        width="200px"
-        height="200px"
-        alt="Speed"
-        class="img-fluid rounded" />
-      <figcaption>MPH to M/S</figcaption>
-    </figure>
-    <article>
-      <fieldset>
-        <legend>MPH to M/S</legend>
-        <label for="mph">MPH</label><br />
-        <input type="number" id="mph" name="speed" /><br />
-        <button id="miles" class="btn btn-primary">Convert</button><br />
-        <input type="number" id="ms" name="speed" /><br />
-        <label for="ms"> Meters Per Second</label><br />
-      </fieldset>
-    </article>
+<div>
+  <section id="speed">
+    <div class="container my-5 col-md-6 offsett-md-2">
+      <section id="mph to ms">
+        <!--Image syntax-->
+        <figure>
+          <img
+            src="/website/static/speed-img.jpg"
+            width="400px"
+            height="267px"
+            alt="Speed"
+            loading="lazy" />
+          src="/static/speed-img.jpg" width="200px" height="200px" alt="Speed"
+          class="img-fluid rounded" />
+          <figcaption>MPH to M/S</figcaption>
+        </figure>
+        <article>
+          <fieldset>
+            <legend>MPH to M/S</legend>
+            <label for="mph">MPH</label><br />
+            <input type="number" id="mph" name="speed" /><br />
+            <button id="miles" class="btn btn-primary">Convert</button><br />
+            <input type="number" id="ms" name="speed" /><br />
+            <label for="ms"> Meters Per Second</label><br />
+          </fieldset>
+        </article>
+      </section>
+    </div>
+
+    <div>
+      <section id="speed">
+        <div class="container my-5 col-md-6 offsett-md-2">
+          <section id="kmh to ms">
+            <!--Image syntax-->
+            <figure>
+              <img
+                src="/website/static/speed-img.jpg"
+                width="400px"
+                height="267px"
+                alt="Speed"
+                loading="lazy" />
+              src="/static/speed-img.jpg" width="200px" height="200px"
+              alt="Speed" class="img-fluid rounded" />
+              <figcaption>KM/h to M/S</figcaption>
+            </figure>
+
+            <article>
+              <fieldset>
+                <legend>KM/h to M/S</legend>
+                <label for="kmh">KM/h</label><br />
+                <input type="number" id="kmh" name="speed" /><br />
+                <button id="kilometers" class="btn btn-primary">Convert</button
+                ><br />
+                <input type="number" id="ms" name="speed" /><br />
+                <label for="ms"> Meters Per Second</label><br />
+              </fieldset>
+            </article>
+          </section>
+        </div>
+
+        {% endblock %}
+      </section>
+    </div>
   </section>
 </div>
-
-<div class="container my-5 col-md-6 offsett-md-2">
-  <section id="kmh to ms">
-    <!--Image syntax-->
-    <figure>
-      <img
-        src="/static/speed-img.jpg"
-        width="200px"
-        height="200px"
-        alt="Speed"
-        class="img-fluid rounded" />
-      <figcaption>KM/h to M/S</figcaption>
-    </figure>
-
-    <article>
-      <fieldset>
-        <legend>KM/h to M/S</legend>
-        <label for="kmh">KM/h</label><br />
-        <input type="number" id="kmh" name="speed" /><br />
-        <button id="kilometers" class="btn btn-primary">Convert</button><br />
-        <input type="number" id="ms" name="speed" /><br />
-        <label for="ms"> Meters Per Second</label><br />
-      </fieldset>
-    </article>
-  </section>
-</div>
-
-{% endblock %}
