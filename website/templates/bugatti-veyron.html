@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {%block content %}
 
 <head>
-  <h3>Price: $1,500,000</h3>
+  <h3 class="text-center mt-5">Price: $1,500,000</h3>
 </head>
 
 <div class="container clearfix my-5">
@@ -10,13 +10,16 @@
     <!--Image syntax-->
     <figure>
       <img
-        src="/website/static/veyron.jpg"
+        src="{{ url_for('static', filename='veyron.jpg') }}"
         width="200px"
         height="200px"
         alt="Veyron"
         class="img-fluid rounded col-md-6 float-md-end mb-3 ms-md-3" />
-      <figcaption>Bugatti Veyron</figcaption>
-      <br />
+      <figcaption
+        class="img-fluid rounded col-md-6 float-md-end mb-3 ms-md-3 text-center">
+        Bugatti Veyron
+      </figcaption>
+      <br class="mt-5" />
       <article>
         The Bugatti Veyron EB 16.4 is a mid-engine sports car, designed and
         developed in Germany by the Volkswagen Group and Bugatti and

@@ -1,84 +1,200 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {%block content %}
 
 <section id="faq">
-  <h1 align="center">FAQ's</h1>
+  <h1 class="text-center">FAQ's</h1>
   <hr />
-  <article>
-    <button class="accordian">What is the top speed of the Chiron?</button>
-    <div class="panel">
-      <p>The top speed of the Chiron is 276mph.</p>
-    </div>
+  <div class="container my-5">
+    <div class="accordian" id="accordianfaq">
+      <div class="accordian-item">
+        <h4 class="accordian-header" id="headingOne">
+          <button
+            class="accordian-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne">
+            What is the top speed of the Chiron?
+          </button>
+        </h4>
+        <div
+          class="accordian-collapse copllapse show"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordianfaq">
+          <div class="accordian-body">
+            The top speed of the Chiron is 276mph.
+          </div>
+        </div>
+      </div>
+      <button
+        class="accordian-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="collapseTwo"
+        aria-expanded="true"
+        aria-controls="collapseTwo">
+        What's the 0-60mph capability of the Chiron?
+      </button>
+      <div
+        class="accordian-collapse copllapse show"
+        aria-labelledby="headingTwo"
+        data-bs-parent="#accordianfaq">
+        <div class="accordian-body">0-60 mph in 2.6 seconds.</div>
+      </div>
 
-    <button class="accordian">
-      What's the 0-60mph capability of the Chiron?
-    </button>
-    <div class="panel">
-      <p>0-60 mph in 2.6 seconds.</p>
-    </div>
+      <button
+        class="accordian-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="collapseThree"
+        aria-expanded="true"
+        aria-controls="collapseThree">
+        What is the 0-60mph capability of the Veyron?
+      </button>
+      <div
+        class="accordian-collapse copllapse show"
+        aria-labelledby="headingThree"
+        data-bs-parent="#accordianfaq">
+        <div class="accordian-body">0-60mph in 3.2 seconds.</div>
+      </div>
 
-    <button class="accordian">
-      What is the 0-60mph capability of the Veyron?
-    </button>
-    <div class="panel">
-      <p>0-60mph in 3.2 seconds.</p>
-    </div>
+      <button
+        class="accordian-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="collapseFour"
+        aria-expanded="true"
+        aria-controls="collapseFour">
+        Is the Chiron a production car or a concept?
+      </button>
+      <div
+        class="accordian-collapse copllapse show"
+        aria-labelledby="headingFour"
+        data-bs-parent="#accordianfaq">
+        <div class="accordian-body">
+          The Chiron is a production vehicle, and not a concept car.
+        </div>
+      </div>
 
-    <button class="accordian">
-      Is the Chiron a production car or a concept?
-    </button>
-    <div class="panel">
-      <p>The Chiron is a production vehicle, and not a concept car.</p>
-    </div>
+      <button
+        class="accordian-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="collapseFive"
+        aria-expanded="true"
+        aria-controls="collapseFive">
+        Is the Veyron a production car or a concept?
+      </button>
+      <div
+        class="accordian-collapse copllapse show"
+        aria-labelledby="headingFive"
+        data-bs-parent="#accordianfaq">
+        <div class="accordian-body">
+          The Veyron is a production vehicle, and not a concept car.
+        </div>
+      </div>
 
-    <button class="accordian">
-      Is the Veyron a production car or a concept?
-    </button>
-    <div class="panel">
-      <p>The Veyron is a production vehicle, and not a concept car.</p>
-    </div>
+      <button
+        class="accordian-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="collapseSix"
+        aria-expanded="true"
+        aria-controls="collapseSix">
+        Why was the Veyron created?
+      </button>
+      <div
+        class="accordian-collapse copllapse show"
+        aria-labelledby="headingSix"
+        data-bs-parent="#accordianfaq">
+        <div class="accordian-body">
+          To beat the land speed record of the McClaren F1.
+        </div>
+      </div>
 
-    <button class="accordian">Why was the Veyron created?</button>
-    <div class="panel">
-      <p>To beat the land speed record of the McClaren F1.</p>
-    </div>
+      <button
+        class="accordian-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="collapseSeven"
+        aria-expanded="true"
+        aria-controls="collapseSeven">
+        Is the customer service line 24 hours?
+      </button>
+      <div
+        class="accordian-collapse copllapse show"
+        aria-labelledby="headingSeven"
+        data-bs-parent="#accordianfaq">
+        <div class="accordian-body">
+          We run a 24 hour customer service, and our operatives are highly
+          trained and are willing to deal with enquiries not matter the time of
+          day.
+        </div>
+      </div>
 
-    <button class="accordian">Is the customer service line 24 hours?</button>
-    <div class="panel">
-      <p>
-        We run a 24 hour customer service, and our operatives are highly trained
-        and are willing to deal with enquiries not matter the time of day.
-      </p>
-    </div>
+      <button
+        class="accordian-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="collapseEight"
+        aria-expanded="true"
+        aria-controls="collapseEight">
+        What's the refund policy?
+      </button>
+      <div
+        class="accordian-collapse copllapse show"
+        aria-labelledby="headingEight"
+        data-bs-parent="#accordianfaq">
+        <div class="accordian-body">
+          Full monies will be refunded within 90 days, as long as the refund is
+          in-line with our refund policy.
+        </div>
+      </div>
 
-    <button class="accordian">What's the refund policy?</button>
-    <div class="panel">
-      <p>
-        Full monies will be refunded within 90 days, as long as the refund is
-        in-line with our refund policy.
-      </p>
-    </div>
+      <button
+        class="accordian-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="collapseNine"
+        aria-expanded="true"
+        aria-controls="collapseNine">
+        How long will my car take to build?
+      </button>
+      <div
+        class="accordian-collapse copllapse show"
+        aria-labelledby="headingNine"
+        data-bs-parent="#accordianfaq">
+        <div class="accordian-body">
+          Customers should have their chosen build completed within 90 days upon
+          receipt of invoice.
+        </div>
+      </div>
 
-    <button class="accordian">How long will my car take to build?</button>
-    <div class="panel">
-      <p>
-        Customers should have their chosen build completed within 90 days upon
-        receipt of invoice.
-      </p>
+      <button
+        class="accordian-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="collapseTen"
+        aria-expanded="true"
+        aria-controls="collapseTen">
+        Where's my nearest Bugatti garage?
+      </button>
+      <div
+        class="accordian-collapse copllapse show"
+        aria-labelledby="headingTen"
+        data-bs-parent="#accordianfaq">
+        <div class="accordian-body">
+          We do not have garages per se, but a valet service. Once booked we
+          will fly our operatives out to you and we'll arrange for your car to
+          be picked up and taken to the nearest centre. Even if this requires
+          your car to be picked by and dropped to us via air. All costs are
+          fully inclusive of repair and transportation, along with operative
+          food, travel and accommodation costs included.
+        </div>
+      </div>
+      <hr />
     </div>
-
-    <button class="accordian">Where's my nearest Bugatti garage?</button>
-    <div class="panel">
-      <p>
-        We do not have garages per se, but a valet service. Once booked we will
-        fly our operatives out to you and we'll arrange for your car to be
-        picked up and taken to the nearest centre. Even if this requires your
-        car to be picked by and dropped to us via air. All costs are fully
-        inclusive of repair and transportation, along with operative food,
-        travel and accommodation costs included.
-      </p>
-    </div>
-    <hr />
-  </article>
+  </div>
 </section>
 
 {% endblock %}

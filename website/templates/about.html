@@ -4,13 +4,17 @@
   <!--Image syntax-->
   <figure>
     <img
-      src="/website/static/ettori-bugatti.png"
+      src="{{ url_for('static', filename='ettori-bugatti.png') }}"
       width="200px"
       height="200px"
       alt="Ettori Bugatti's picture"
       class="img-fluid rounded col-md-6 float-md-end mb-3 ms-md-3" />
-    <figcaption>Ettori Bugatti (Founder)</figcaption>
+    <figcaption
+      class="img-fluid rounded col-md-6 float-md-end mb-3 ms-md-3 text-center">
+      Ettori Bugatti (Founder)
+    </figcaption>
   </figure>
+  <br class="mt-5" />
   <article>
     Ettori Bugatti was the legendary founder of the Bugatti company and the
     designer of the most successful race cars and luxurious vehicles of his day.

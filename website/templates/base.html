@@ -18,6 +18,15 @@
       crossorigin="anonymous" />
 
     <title>{% block title %}Home{% endblock %}</title>
+    <style>
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        z-index: 99;
+      }
+    </style>
   </head>
   <body>
     <!-- Nav bar that collapses and alters depending on screen width or resolution -->
@@ -32,16 +41,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar">
           <div class="navbar-nav">
-            <!-- Code to display only nav headers once a user is authenticated via Jinja template string -->
-            <!-- Logout Nav link, only displayed once authenticated -->
-            <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
-            <!-- Purchase form Nav link, again only displayed once logged in -->
-            <a
-              class="nav-item nav-link"
-              id="submit-purchase-form"
-              href="/submit-purchase-form"
-              >Submit Purchase Form</a
-            >
             <!-- Nav link for about -->
             <a class="nav-item nav-link" id="about" href="/">About</a>
             <!-- Nav link for History -->
@@ -55,6 +54,7 @@
               href="/bugatti-chiron"
               >Bugatti Chiron</a
             >
+            <!--Bugatti Veyron nav link-->
             <a
               class="nav-item nav-link"
               id="bugatti-veyron"
@@ -65,17 +65,21 @@
             <a class="nav-item nav-link" id="conversion" href="/conversion"
               >Speed Conversions</a
             >
+            <a class="nav-item nav-link" id="faq" href="/faq">FAQ</a>
             <!-- Nav link for login, notice it's included within the else statement -->
             <a class="nav-item nav-link" id="login" href="/login">Login</a>
             <!-- Nav link for Sign Up -->
             <a class="nav-item nav-link" id="sign-up" href="/sign-up"
               >Sign Up</a
             >
-
-            <!-- Button with icon (example usage, not typically found in a navbar) -->
-            <button class="btn btn-light">
-              <i class="fa fa-home"></i> Top
-            </button>
+            <!--Submit Purchase Form Link-->
+            <a
+              class="nav-item nav-link"
+              id="submit-purchase-form"
+              href="/submit-purchase-form"
+              >Submit Purchase Form</a
+            >
+            <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
           </div>
         </div>
       </div>

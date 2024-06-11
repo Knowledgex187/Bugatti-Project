@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {%block content %}
 
 <head>
-  <h3>Price: $2,500,000</h3>
+  <h3 class="text-center mt-5">Price: $2,500,000</h3>
 </head>
 
 <div class="container clearfix my-5">
@@ -10,13 +10,16 @@
     <!--Image syntax-->
     <figure>
       <img
-        src="/website/static/chiron.jpg"
+        src="{{ url_for('static', filename='chiron.jpg') }}"
         width="200px"
         height="200px"
         alt="Chiron"
         class="img-fluid rounded col-md-6 float-md-end mb-3 ms-md-3" />
-      <figcaption>Bugatti Chiron</figcaption>
-      <br />
+      <figcaption
+        class="img-fluid rounded col-md-6 float-md-end mb-3 ms-md-3 text-center">
+        Bugatti Chiron
+      </figcaption>
+      <br class="mt-5" />
       <article>
         The Bugatti Chiron is a mid-engine two-seater sports car designed and
         developed in Germany by Bugatti Engineering GmbH and manufactured in

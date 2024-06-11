@@ -1,19 +1,22 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {%block content %}
 
-<div>
+<div class="container mt-5">
   <section id="speed">
     <div class="container my-5 col-md-6 offsett-md-2">
       <section id="mph to ms">
         <!--Image syntax-->
         <figure>
           <img
-            src="/website/static/speed-img.jpg"
+            src="{{ url_for('static', filename='speed-img.jpg') }}"
             width="400px"
             height="267px"
             alt="Speed"
             loading="lazy"
             class="img-fluid rounded col-md-6 float-md-end mb-3 ms-md-3" />
-          <figcaption>MPH to M/S</figcaption>
+          <figcaption
+            class="img-fluid rounded col-md-6 float-md-end mb-3 ms-md-3 text-center">
+            MPH to M/S
+          </figcaption>
         </figure>
         <article>
           <fieldset>
@@ -35,13 +38,16 @@
             <!--Image syntax-->
             <figure>
               <img
-                src="/website/static/speed-img.jpg"
+                src="{{ url_for('static', filename='speed-img.jpg') }}"
                 width="400px"
                 height="267px"
                 alt="Speed"
                 loading="lazy"
                 class="img-fluid rounded col-md-6 float-md-end mb-3 ms-md-3" />
-              <figcaption>KM/h to M/S</figcaption>
+              <figcaption
+                class="img-fluid rounded col-md-6 float-md-end mb-3 ms-md-3 text-center">
+                KM/h to M/S
+              </figcaption>
             </figure>
 
             <article>
