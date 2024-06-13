@@ -19,6 +19,7 @@ def create_app():
     app.config["SQLALCHEMY_DATABASE_URI"] = (
         f"sqlite:///{DB_NAME}"  # Defines database URI
     )
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     # Used to bind the SQLAlchemy instance to your Flask application.
     db.init_app(app)

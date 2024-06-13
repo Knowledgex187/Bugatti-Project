@@ -24,7 +24,9 @@ def sign_up():
         user = User.query.filter_by(email=email).first()
         if user:
             flash("User already exists!", category="error")
-        if len(email) < 4:
+            return render_template("sign-up.html", user=current_user)
+
+        elif len(email) < 4:
             flash("Email must be greater than 3 characters.", category="error")
         elif len(first_name) < 3:
             flash(
@@ -65,8 +67,8 @@ def sign_up():
             db.session.add(new_user)  # Adds new user to database
             db.session.commit()  # Commits information to database
             flash("Account Created! Please login!", category="success")
-            login_user(user, remember=True)
-            return redirect(url_for("views.login"))
+            login_user(new_user, remember=True)
+            return redirect(url_for("views.home"))
 
     return render_template("sign-up.html", user=current_user)
 
@@ -90,10 +92,10 @@ def login():
             if check_password_hash(user.password, password):
                 flash("Logged in Successfully!", category="success")
                 login_user(user, remember=True)  # Remembers user logged in
-                return redirect(url_for("views.about"))
+                return redirect(url_for("views.home"))
             else:
                 flash(
-                    "Incorrect password or Username. Please try again!",
+                    "Incorrect password or username. Please try again!",
                     category="error",
                 )
         else:
@@ -144,28 +146,28 @@ def purchase():
                 "Last Name must be greater than two characters.",
                 category="error",
             )
-        elif len(country) < 30:
+        elif len(country) < 29:
             flash(
                 "Country can't be more than 29 characters!", category="error"
             )
-        elif len(company_name) < 20:
+        elif len(company_name) < 19:
             flash("Company name can't exceed 19 characters!", category="error")
-        elif len(address_line1) < 30:
+        elif len(address_line1) < 29:
             flash("Address can't exceed 29 characters!", category="error")
-        elif len(address_line2) < 30:
+        elif len(address_line2) < 29:
             flash("Address can't exceed 29 characters!", category="error")
-        elif len(city) < 86:
+        elif len(city) < 85:
             flash("City can't exceed 85 characters!", category="error")
         elif not city.isalpha():
             flash("City must contain only letters!", category="error")
-        elif len(zip_code) < 16:
+        elif len(zip_code) < 15:
             flash(
                 "Zip Code//Post Code must not be more than 15 digits!",
                 category="error",
             )
         elif not phone.isdigit():
             flash("Telephone number must be only numerical!", category="error")
-        elif len(phone) < 15:
+        elif len(phone) < 14:
             flash(
                 "Phone number can't be more than 14 characters!",
                 category="error",
@@ -175,7 +177,7 @@ def purchase():
                 "Card number must contain numerical values only!",
                 category="error",
             )
-        elif len(card_number) < 17:
+        elif len(card_number) < 16:
             flash(
                 "Card number can't be more than 16 digits!", category="error"
             )
@@ -208,6 +210,7 @@ def purchase():
                 expiry_month=expiry_month,
                 expiry_year=expiry_year,
                 security_code=security_code,
+                user_id=current_user.id,
             )
             db.session.add(new_purchase)
             db.session.commit()
@@ -215,6 +218,6 @@ def purchase():
                 "Purchase successful! Your car will be dispatched to the address provided within 16 weeks!",
                 category="success",
             )
-            return redirect(url_for("views.history"))
+            return redirect(url_for("views.home"))
 
     return render_template("purchase-form.html", user=current_user)
