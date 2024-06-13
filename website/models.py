@@ -11,7 +11,9 @@ class User(db.Model, UserMixin):
     first_name = db.Column(db.String(150))
     last_name = db.Column(db.String(150))
     date = db.Column(db.DateTime(timezone=True), default=func.now())
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+
+    # Establish relationship with Purchase
+    purchases = db.relationship("Purchase", back_populates="user")
 
 
 class Purchase(db.Model):
@@ -31,4 +33,9 @@ class Purchase(db.Model):
     expiry_month = db.Column(db.String(2), nullable=False)
     expiry_year = db.Column(db.String(2), nullable=False)
     security_code = db.Column(db.String(3), nullable=False)
-    purchase = db.relationship("User")
+
+    # Foreign key to link Purchase to User
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+
+    # Establish relationship with User
+    user = db.relationship("User", back_populates="purchases")
