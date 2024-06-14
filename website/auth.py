@@ -215,7 +215,7 @@ def purchase():
             db.session.add(new_purchase)
             db.session.commit()
             flash(
-                "Purchase successful! Your car will be dispatched to the address provided within 16 weeks!",
+                "Success! Car dispatch in 16 weeks.",
                 category="success",
             )
             return redirect(url_for("views.home"))
